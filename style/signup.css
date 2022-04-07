@@ -1,0 +1,130 @@
+:root {
+    --main-color: #c0392b;
+    --body-bg: #181616;
+    --box-bg: #221f1f;
+    --text-color: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+}
+
+body{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #181616,#c0392b);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.center {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    background: #221f1f;
+    border-radius: 10px;
+    color: var(--text-color);
+    align-items: center;
+    perspective: 2800px;
+}
+
+.center h1 {
+    text-align: center;
+    color: var(--main-color);
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid var(--body-bg);
+}
+
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .form-control {
+    position: relative;
+    margin:  30px 0;
+}
+
+
+
+.form-control input {
+    color: var(--text-color);
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border-bottom:  2px solid var(--text-color);
+    border-right: none;
+    background: none;
+    outline: none;
+}
+
+
+.form-control label {
+    position: absolute;
+    top: 40%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition:  .5s;
+}
+
+.form-control span::before{
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+}
+
+.form-control.success span::before{
+    background: green;
+}
+
+.form-control small {
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: var(--main-color);
+}
+
+.form-control input:focus ~ label,
+.form-control input:valid ~ label {
+    top: -5px;
+    color: var(--main-color);
+}
+
+.form-control.success input:focus ~ label,
+.form-control.success input:valid ~ label {
+    color: green;
+}
+
+.form-control input:focus ~ span::before,
+.form-control input:valid ~ span::before {
+    width: 100%;
+}
+
+.login_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+.login_link a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.login_link a:hover {
+    text-decoration: underline;
+}
