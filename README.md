@@ -23,13 +23,12 @@ This is a web application called Watch and is intended for watching published mo
 
 
 ## Screenshots
-Login----------------------
+Login-----------------------------
 ![Login!](images/Login.png)
-Signup---------------------
+Signup----------------------------
 ![Signup!](images/Signup.png)
-Desktop--------------------
+Desktop/Mobile--------------------
 ![Desktop!](images/desktop.png)
-Mobile---------------------
 ![Mobile!](images/mobile.png)
 
 
